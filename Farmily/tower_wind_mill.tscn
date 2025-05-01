@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxupq6ti0gtd5"]
+
+[ext_resource type="ArrayMesh" uid="uid://cv4mccdlj3vdc" path="res://OBJ/TowerWindmill.obj" id="1_eb2t7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1ch6w"]
+size = Vector3(0.403351, 1.12051, 0.45343)
+
+[node name="TowerWindMill" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("1_eb2t7")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0737, 5.65517, -0.0149536)
+shape = SubResource("BoxShape3D_1ch6w")
+metadata/_edit_group_ = true

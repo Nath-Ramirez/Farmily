@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://h4kgajehagho"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvjvmy5kiywbu" path="res://OBJ/BigBarn.obj" id="1_cwpfq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3rfw7"]
+size = Vector3(0.735718, 0.772659, 0.831787)
+
+[node name="Cottage" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("1_cwpfq")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0406361, 4.05937, -0.0243683)
+shape = SubResource("BoxShape3D_3rfw7")
+metadata/_edit_group_ = true
