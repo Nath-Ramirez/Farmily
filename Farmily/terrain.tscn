@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://tq82hoh32pfq"]
+[gd_scene load_steps=8 format=3 uid="uid://c7kr1bf5i4o4k"]
 
 [ext_resource type="MeshLibrary" uid="uid://1dqsqvlpc60s" path="res://assets/enviroment/enviroment_tiles.tres" id="1_0u6kl"]
+[ext_resource type="Script" uid="uid://dq3a4hy8mchba" path="res://directional_light_3d.gd" id="1_avahw"]
+[ext_resource type="Script" uid="uid://1sp24v67b1cx" path="res://world_environment.gd" id="1_n7k1k"]
 [ext_resource type="MeshLibrary" uid="uid://d2g5ferth0yxp" path="res://assets/enviroment/floor_tiles.tres" id="2_0u6kl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0u6kl"]
@@ -21,13 +23,15 @@ glow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_n7k1k")
+script = ExtResource("1_n7k1k")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0.491272, -0.643895, 0.586558, -0.0930133, 0.630792, 0.770357, 1.53877, 13.7824, -4.90103)
+transform = Transform3D(-0.814137, -0.34476, 0.467248, 0.179201, 0.616216, 0.766919, -0.552329, 0.708109, -0.439903, 1.53877, 13.7824, -4.90103)
 light_color = Color(1, 0.646378, 0.311478, 1)
 shadow_enabled = true
 shadow_reverse_cull_face = true
 sky_mode = 1
+script = ExtResource("1_avahw")
 
 [node name="GridMap2" type="GridMap" parent="."]
 mesh_library = ExtResource("2_0u6kl")
