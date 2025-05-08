@@ -16,6 +16,6 @@ mesh = ExtResource("1_eb2t7")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0737, 5.65517, -0.0149536)
+transform = Transform3D(9.99389, 0.334788, -0.100438, -0.33468, 9.99439, 0.0123762, 0.100796, -0.0090072, 9.99949, 0.0737, 5.65517, -0.0149536)
 shape = SubResource("BoxShape3D_1ch6w")
 metadata/_edit_group_ = true
