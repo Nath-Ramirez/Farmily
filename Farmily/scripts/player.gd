@@ -33,8 +33,6 @@ func _physics_process(delta: float) -> void:
 		animate_player("stop")
 
 	move_and_slide()
-	
-
 
 func animate_player(animation:String):
 	match animation:

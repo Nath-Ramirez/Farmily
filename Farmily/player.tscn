@@ -1,7 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://ou4ca0ubuv5f"]
+[gd_scene load_steps=14 format=3 uid="uid://ou4ca0ubuv5f"]
 
 [ext_resource type="Texture2D" uid="uid://joabgtwy5jl8" path="res://Cute_Fantasy_Free/Player/Player.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://delytohdbfaop" path="res://scripts/player.gd" id="2_onrkg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -151,6 +153,11 @@ _data = {
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("2_onrkg")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_onrkg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.133452, 0, 0, 0, 0.2, 0, 0.0258246, 0)

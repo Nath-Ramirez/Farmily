@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8iwg5x300by7"]
+[gd_scene load_steps=6 format=3 uid="uid://b8iwg5x300by7"]
 
 [ext_resource type="PackedScene" uid="uid://c7kr1bf5i4o4k" path="res://terrain.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bcqy0hoheqk0q" path="res://Barn.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ou4ca0ubuv5f" path="res://player.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://djtefjk47e2ee" path="res://animals.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bxupq6ti0gtd5" path="res://tower_wind_mill.tscn" id="5_lquwl"]
 
 [node name="MainScene" type="Node3D"]
 
@@ -29,5 +30,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.741868)
 
 [node name="SheepBody" parent="Animals" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.638559, 0, -0.670172)
+
+[node name="TowerWindMill" parent="." instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3792, 0, -16.5662)
 
 [editable path="Animals"]

@@ -169,6 +169,7 @@ metadata/_edit_group_ = true
 
 [node name="Cow" type="Sprite3D" parent="CowBody"]
 billboard = 1
+shaded = true
 texture_filter = 0
 texture = ExtResource("1_dky03")
 hframes = 2
@@ -184,11 +185,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.351145, 0.0032959, 0.00760791,
 shape = SubResource("BoxShape3D_dky03")
 
 [node name="Timer" type="Timer" parent="CowBody"]
+wait_time = 3.0
+autostart = true
 
 [node name="ChickenBody" type="CharacterBody3D" parent="."]
 
 [node name="Chicken" type="Sprite3D" parent="ChickenBody"]
 billboard = 1
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_066lt")
 hframes = 2
@@ -203,10 +207,13 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.351145, 0.0032959, 0.00760791, 0.00576782)
 shape = SubResource("BoxShape3D_dky03")
 
+[node name="Timer" type="Timer" parent="ChickenBody"]
+
 [node name="PigBody" type="CharacterBody3D" parent="."]
 
 [node name="Pig" type="Sprite3D" parent="PigBody"]
 billboard = 1
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_xr8s6")
 hframes = 2
@@ -221,6 +228,8 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.351145, 0.0032959, 0.00760791, 0.00576782)
 shape = SubResource("BoxShape3D_dky03")
 
+[node name="Timer" type="Timer" parent="PigBody"]
+
 [node name="SheepBody" type="CharacterBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SheepBody"]
@@ -229,6 +238,7 @@ shape = SubResource("BoxShape3D_dky03")
 
 [node name="Sheep" type="Sprite3D" parent="SheepBody"]
 billboard = 1
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_702ke")
 hframes = 2
@@ -238,3 +248,10 @@ vframes = 2
 libraries = {
 &"": SubResource("AnimationLibrary_7d1e4")
 }
+
+[node name="Timer" type="Timer" parent="SheepBody"]
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true

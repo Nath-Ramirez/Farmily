@@ -8,4 +8,4 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_W):
-		rotate_z(10 * delta)
+		rotate_z(2 * delta)
