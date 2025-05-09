@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8iwg5x300by7"]
+
+[ext_resource type="PackedScene" uid="uid://c7kr1bf5i4o4k" path="res://terrain.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bcqy0hoheqk0q" path="res://Barn.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ou4ca0ubuv5f" path="res://player.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://djtefjk47e2ee" path="res://animals.tscn" id="4_1bvp3"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 6.50004, 2.23539, -0.498757)
+
+[node name="Cottage" parent="." instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.962, 1.37919, -12.6212)
+
+[node name="Node3D" parent="." instance=ExtResource("1_ig7tw")]
+
+[node name="Animals" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.00550273, 2.03005, 0.00201654)
+
+[node name="CowBody" parent="Animals" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38086, 0, -0.882648)
+
+[node name="ChickenBody" parent="Animals" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856136, 0, -1.21059)
+
+[node name="PigBody" parent="Animals" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.741868)
+
+[node name="SheepBody" parent="Animals" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.638559, 0, -0.670172)
+
+[editable path="Animals"]

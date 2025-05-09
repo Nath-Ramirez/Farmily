@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://djtefjk47e2ee"]
+[gd_scene load_steps=19 format=3 uid="uid://djtefjk47e2ee"]
 
+[ext_resource type="Script" uid="uid://w13t1diq1bnu" path="res://scripts/animals.gd" id="1_066lt"]
 [ext_resource type="Texture2D" uid="uid://drk01k5jq33xn" path="res://Cute_Fantasy_Free/Animals/Cow/Cow.png" id="1_dky03"]
 [ext_resource type="Texture2D" uid="uid://dxx5tlxxo2d1c" path="res://Cute_Fantasy_Free/Animals/Chicken/Chicken.png" id="2_066lt"]
 [ext_resource type="Texture2D" uid="uid://o7j8nppwsxky" path="res://Cute_Fantasy_Free/Animals/Pig/Pig.png" id="3_xr8s6"]
@@ -42,6 +43,9 @@ _data = {
 &"RESET": SubResource("Animation_xyqjv"),
 &"cow_animation": SubResource("Animation_1u0sg")
 }
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dky03"]
+size = Vector3(0.2146, 0.257416, 0.260925)
 
 [sub_resource type="Animation" id="Animation_5pjfr"]
 length = 0.001
@@ -158,48 +162,79 @@ _data = {
 }
 
 [node name="Animals" type="Node3D"]
+script = ExtResource("1_066lt")
 metadata/_edit_group_ = true
 
-[node name="Cow" type="Sprite3D" parent="."]
+[node name="CowBody" type="CharacterBody3D" parent="."]
+
+[node name="Cow" type="Sprite3D" parent="CowBody"]
+billboard = 1
 texture_filter = 0
 texture = ExtResource("1_dky03")
 hframes = 2
 vframes = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Cow"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CowBody/Cow"]
 libraries = {
 &"": SubResource("AnimationLibrary_dprhg")
 }
 
-[node name="Chicken" type="Sprite3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CowBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.351145, 0.0032959, 0.00760791, 0.00576782)
+shape = SubResource("BoxShape3D_dky03")
+
+[node name="Timer" type="Timer" parent="CowBody"]
+
+[node name="ChickenBody" type="CharacterBody3D" parent="."]
+
+[node name="Chicken" type="Sprite3D" parent="ChickenBody"]
+billboard = 1
 texture_filter = 0
 texture = ExtResource("2_066lt")
 hframes = 2
 vframes = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Chicken"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ChickenBody/Chicken"]
 libraries = {
 &"": SubResource("AnimationLibrary_wkia5")
 }
 
-[node name="Pig" type="Sprite3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChickenBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.351145, 0.0032959, 0.00760791, 0.00576782)
+shape = SubResource("BoxShape3D_dky03")
+
+[node name="PigBody" type="CharacterBody3D" parent="."]
+
+[node name="Pig" type="Sprite3D" parent="PigBody"]
+billboard = 1
 texture_filter = 0
 texture = ExtResource("3_xr8s6")
 hframes = 2
 vframes = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Pig"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PigBody/Pig"]
 libraries = {
 &"": SubResource("AnimationLibrary_eq1el")
 }
 
-[node name="Sheep" type="Sprite3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PigBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.351145, 0.0032959, 0.00760791, 0.00576782)
+shape = SubResource("BoxShape3D_dky03")
+
+[node name="SheepBody" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SheepBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.351145, 0.0032959, 0.00760791, 0.00576782)
+shape = SubResource("BoxShape3D_dky03")
+
+[node name="Sheep" type="Sprite3D" parent="SheepBody"]
+billboard = 1
 texture_filter = 0
 texture = ExtResource("4_702ke")
 hframes = 2
 vframes = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sheep"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SheepBody/Sheep"]
 libraries = {
 &"": SubResource("AnimationLibrary_7d1e4")
 }

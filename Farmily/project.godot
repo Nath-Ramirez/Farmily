@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="Farmily"
-run/main_scene="uid://bcqy0hoheqk0q"
+run/main_scene="uid://b8iwg5x300by7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
