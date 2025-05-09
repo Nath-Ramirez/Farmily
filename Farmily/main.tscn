@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8iwg5x300by7"]
+[gd_scene load_steps=7 format=3 uid="uid://b8iwg5x300by7"]
 
 [ext_resource type="PackedScene" uid="uid://c7kr1bf5i4o4k" path="res://terrain.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bcqy0hoheqk0q" path="res://Barn.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ou4ca0ubuv5f" path="res://player.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://djtefjk47e2ee" path="res://animals.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bxupq6ti0gtd5" path="res://tower_wind_mill.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://ckjfdpcftdr8s" path="res://crop.tscn" id="6_7mycd"]
 
 [node name="MainScene" type="Node3D"]
 
@@ -33,5 +34,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.638559, 0, -0.670172)
 
 [node name="TowerWindMill" parent="." instance=ExtResource("5_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3792, 0, -16.5662)
+
+[node name="Crops" type="Node" parent="."]
+
+[node name="Crop" parent="Crops" instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8837, 1.47925, 0)
+
+[node name="Crop2" parent="Crops" instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8837, 1.47925, 0.955757)
+
+[node name="Crop3" parent="Crops" instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8837, 1.47925, 2.00478)
+
+[node name="Crop4" parent="Crops" instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4722, 1.47925, 2.00478)
+
+[node name="Crop5" parent="Crops" instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4722, 1.47925, 0.819996)
+
+[node name="Crop6" parent="Crops" instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4722, 1.47925, 0.0203843)
 
 [editable path="Animals"]

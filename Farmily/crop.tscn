@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://ckjfdpcftdr8s"]
+
+[ext_resource type="PackedScene" uid="uid://du3wjglx5ula1" path="res://assets/enviroment/gltf/Bush_1_A_Color1.gltf" id="1_d7y2n"]
+[ext_resource type="Script" uid="uid://b0pfooca3i3pl" path="res://scripts/crop.gd" id="1_m5ysp"]
+[ext_resource type="PackedScene" uid="uid://ihhb1vvthy5f" path="res://assets/enviroment/gltf/Bush_1_B_Color1.gltf" id="2_m5ysp"]
+[ext_resource type="PackedScene" uid="uid://dkby8idmvsy24" path="res://assets/enviroment/gltf/Bush_1_C_Color1.gltf" id="3_03vfa"]
+[ext_resource type="PackedScene" uid="uid://dedsqxc0mk22" path="res://assets/enviroment/gltf/Bush_1_D_Color1.gltf" id="4_csiid"]
+[ext_resource type="Texture2D" uid="uid://cfkob4562fa1r" path="res://assets/regadera.png" id="6_03vfa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5k18e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m5ysp"]
+size = Vector3(1, 2.10199, 1)
+
+[node name="Crop" type="StaticBody3D"]
+script = ExtResource("1_m5ysp")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_5k18e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.388146, 0, 0, 0, 0.522473, 0, 0, 0, 0.635703, 0, 0.398599, 0)
+shape = SubResource("BoxShape3D_m5ysp")
+
+[node name="Bush_1_A_Color12" parent="." instance=ExtResource("1_d7y2n")]
+
+[node name="Bush_1_B_Color12" parent="." instance=ExtResource("2_m5ysp")]
+visible = false
+
+[node name="Bush_1_C_Color12" parent="." instance=ExtResource("3_03vfa")]
+visible = false
+
+[node name="Bush_1_D_Color12" parent="." instance=ExtResource("4_csiid")]
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 4.69185, 0)
+modulate = Color(1, 1, 1, 0)
+billboard = 1
+texture = ExtResource("6_03vfa")
